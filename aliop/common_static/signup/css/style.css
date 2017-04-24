@@ -1,0 +1,36 @@
+.myform{
+text-align: center;
+    margin-top: 100px;
+}
+
+#id_email{
+    position: relative;
+    left: 17px;
+}
+
+#id_tel{
+    position: relative;
+    left: 27px;
+}
+
+#mysubmit{
+    position: relative;
+    left: 40px;
+}
+
+#button1{
+
+    float: right;
+}
+
+#button2{
+    float: right;
+    margin-right: 20px;
+}
+
+.button{
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    height: 30px;
+    }

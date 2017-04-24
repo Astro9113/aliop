@@ -1,0 +1,29 @@
+.create form{
+    width: 1200px;
+    margin: 0 auto;
+}
+.create p{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 20px;
+    }
+
+.create label{
+    margin-right: 20px;
+    }
+
+ .create select{
+     font-size: 20px;
+     }
+
+ .create input{
+     margin-left: 710px;
+    margin-top: 70px;
+    }
+
+ #button1 {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -23px;
+    }

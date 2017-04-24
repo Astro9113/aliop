@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问记录</title>
+    {% load static %}
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- Theme style  -->
+	<!--<link rel="stylesheet" href="login/css/style.css">-->
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<form class="form-inline" style="    margin: 0 auto;    width: 1200px;    margin-top: 30px;    margin-bottom: 30px;">
+  <div class="form-group">
+    <label for="exampleInputName2">Username</label>
+    <input type="text" class="form-control" id="exampleInputName2" name="username" >
+  </div>
+  <button type="submit" class="btn btn-default">搜索</button>
+</form>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>用户</th>
+      <th>访问方式</th>
+        <th>访问url</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for obj in objs %}
+    <tr>
+        <th scope="row">{{obj.cur}}</th>
+      <td>{{obj.username}}</td>
+      <td>{{obj.method}}</td>
+        <td>{{obj.url}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

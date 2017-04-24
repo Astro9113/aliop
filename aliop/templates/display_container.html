@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>容器列表</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+
+    {% load static %}
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- Theme style  -->
+	<!--<link rel="stylesheet" href="login/css/style.css">-->
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+<div>
+    <br/>
+    <div>
+        <ul class="nav nav-tabs">
+            <li role="presentation"><a href="/display_service/{{myins.name}}">服务列表</a></li>
+            <li role="presentation" class="active"><a href="/display_container/{{myins.name}}">容器列表</a></li>
+            <li role="presentation"><a href="/listall">返回首页</a></li>
+        </ul>
+    </div>
+    <br/><br/>
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>应用名称</th>
+      <th>创建时间</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <th scope="row">{{myins.name}}</th>
+      <td>{{myins.created}}</td>
+    </tr>
+  </tbody>
+</table>
+    <br/>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>名称ID</th>
+      <th>状态</th>
+        <th>所属服务</th>
+      <th>端口</th>
+      <th>容器IP</th>
+      <th>节点IP</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for k in myins.services%}
+    {%for m in k.containers%}
+  <tr>
+        <th scope="row">{{m.name}}</th>
+        <td>{{m.status}}</td>
+      <td>{{k.name}}</td>
+        <td>{{m.ports}}</td>
+        <td>{{m.ip}}</td>
+        <td>{{m.node}}</td>
+    </tr>
+    {%endfor%}
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+</body>
+
+</html>

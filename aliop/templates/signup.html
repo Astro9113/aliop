@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Signup</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+
+    {% load static %}
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- Theme style  -->
+	<!--<link rel="stylesheet" href="login/css/style.css">-->
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+<div style="    width: 1200px;    margin: 0 auto;    margin-top: 80px;">
+<form class="form-horizontal" method="post" style="    width: 600px;    margin: 0 auto;">
+    <div class="form-group">
+    <label for="inputText3" class="col-sm-2 control-label">用户:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputText3" placeholder="Username" name="username">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="password">
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">邮箱:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email">
+    </div>
+  </div>
+
+   <div class="form-group">
+    <label for="inputNum3" class="col-sm-2 control-label">电话:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputNum3" placeholder="Tel" name="tel">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">注册</button>
+    </div>
+  </div>
+    <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <a href="/login"> <button type="button" class="btn btn-success">（已有账户）登录</button></a>
+        <a href="/listall"> <button type="button" class="btn btn-primary">（跳过注册）直接访问</button></a>
+    </div>
+  </div>
+</form>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.pro{
+width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.pro input{
+margin-left: 90px;
+    margin-top: 22px;
+}

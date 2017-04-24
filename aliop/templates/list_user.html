@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>用户列表</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+
+    {% load static %}
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- Theme style  -->
+	<!--<link rel="stylesheet" href="login/css/style.css">-->
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+<div style="margin-top:30px">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>用户名</th>
+      <th>邮箱</th>
+      <th>电话</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for user in objs %}
+    <tr>
+        <th scope="row">{{user.username}}</th>
+      <td>{{user.email}}</td>
+      <td>{{user.tel}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+</body>
+
+</html>
