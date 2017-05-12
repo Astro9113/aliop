@@ -1,0 +1,50 @@
+.main {
+  background: #fff;
+}
+.content{
+  height: 100%;
+}
+.mainleft {
+  background: #fff;
+  padding: 0px;
+  border-width: 0px 8px 0px 0px;
+  border-style: solid;
+  border-color: #ddd;
+  text-align: center;
+}
+.mainright {
+  background: #fff;
+  height: 100%;
+}
+a {
+  border-bottom: none;
+  color: #337ab7;
+}
+a:hover, a:focus{
+  color: #332af7;
+}
+body{
+  padding: 0px;
+  background: #ddd;
+  font-family: "Microsoft YaHei";
+}
+
+.divider {
+  width: 80%;
+}
+
+.dot {
+  display:list-item;
+  list-style-type:disc;
+  margin-left:2em;
+  text-align: left;
+  font-size: 12px;
+  color: #666666;
+}
+
+.minNav{
+}
+
+.assetsbtn{
+
+}
