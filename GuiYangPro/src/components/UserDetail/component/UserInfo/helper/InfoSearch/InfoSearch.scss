@@ -1,0 +1,21 @@
+.astro-personal-service-button{
+  display: inline-block;
+  float: right;
+  margin-top: 20px;
+  margin-right: 50px;
+  button{
+    background: #0588fa;
+    color: #ffffff;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid #0588fa;
+    text-align: center;
+    line-height: 28px;
+    width: 100px;
+    float: right;
+    margin-right: 10px;
+  }
+  img {
+    padding-right: 5px;
+  }
+}

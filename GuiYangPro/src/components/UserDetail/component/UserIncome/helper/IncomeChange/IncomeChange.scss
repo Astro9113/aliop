@@ -1,0 +1,45 @@
+@media (min-width: 768px) {
+  .astro-home-modal{
+    width: 800px;
+    background: white;
+    position: absolute;
+    left: -170px;
+    height: 660px;
+    h4{
+      text-align: center;
+      background: #f6f6f6;
+      height: 50px;
+      line-height: 45px;
+      margin: 0;
+    }
+  }
+  .astro-home-modal-form{
+    margin-top: 20px;
+    input{
+      height: 38px;
+    }
+    select{
+      height: 38px;
+    }
+
+  }
+  .astro-home-modal-button{
+    //position: relative;
+    //left: -438px;
+    //top: 50px;
+    //height: 0;
+    button{
+      background: #0588fa;
+      color: #ffffff;
+      outline: none;
+      font-size: 14px;
+      border: 1px solid #0588fa;
+      text-align: center;
+      line-height: 28px;
+      width: 100px;
+      margin: 50px 10px;
+      position: relative;
+      left: 38%;
+    }
+  }
+}

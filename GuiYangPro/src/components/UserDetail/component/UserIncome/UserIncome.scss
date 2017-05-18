@@ -1,0 +1,45 @@
+.astro-personal-income{
+  //width: 100%;
+  //height: 570px;
+  //border: 1px solid #ededed;
+  //position: relative;
+  //top: 1105px;
+}
+.astro-personal-income-line{
+  //width: 100%;
+  //border: 1px solid #ededed;
+  //position: absolute;
+  //top: 70px;
+}
+.astro-personal-income-title {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  img {
+    margin-top: -10px;
+  }
+  p {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 24px;
+    color: #2b2c35;
+  }
+}
+
+.astro-personal-income-button{
+  background: #0588fa;
+  color: #ffffff;
+  outline: none;
+  font-size: 14px;
+  border: 1px solid #0588fa;
+  text-align: center;
+  line-height: 28px;
+  width: 100px;
+  float: right;
+  margin-right: 100px;
+}
+
+.astro-personal-income-page{
+  position: relative;
+  top: 20px;
+}

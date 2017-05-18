@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>RedCloud BlockChain</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/cloud.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+   <script src="assets/js/jquery-3.1.1.js"></script>
+   <link rel="stylesheet" href="assets/css/1.css" />
+  
+  <link rel="stylesheet" href="assets/css/red-annualExpenditure.css">
+
+<style type="text/css">   
+/**{
+  margin:0;
+  padding:0;
+}*/
+.img1{
+  text-align: center;
+}
+.img{     
+  position:absolute;   
+  /*left:200px;
+  top:350px;
+  text-align:center；*/
+  /*top: 50%;*/
+  left: 50%;
+  top:100px;
+  padding:20px;
+  text-align:center;
+  /*background:#393;
+  color:#fff;*/
+  transform: translate(-50%, -50%);
+  }  
+ 
+  #lo_box{
+    padding-left: 0;
+    width:100vw;
+    list-style-type: none;
+  }
+  #lo_box li{
+    margin:0 auto;
+    width:60vw;
+    margin-top: 20vw;
+  }
+  .footer_cc{
+    padding:4vw;
+    text-align: center;
+    border:1px solid #ccc;
+    margin:0 auto;
+    margin-top: 10vw;
+    width:70vw;
+    height:20vw;
+  }
+  .am-btn-group{
+		/*width:70vw;*/
+  	margin-left:15vw;
+  }
+</style>
+
+
+</head>
+<body>
+	<header class="admin-header-list" id="appHeader" data-reactid=".23uigcxcrv6.1">
+			<div class="row" style="width:100%;" data-reactid=".23uigcxcrv6.1.0">
+				<div class="col_left" data-reactid=".23uigcxcrv6.1.0.0">
+					<span data-reactid=".23uigcxcrv6.1.0.0.2">
+						<a class="img_1" href="list.html" data-reactid=".23uigcxcrv6.1.0.0.1">
+							<img class="img_1"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAAAvCAYAAABqrH0KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlBMjkwOEM4MUI4QTExRTdCOTIyQTg0NjhEOUM4RjU2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlBMjkwOEM5MUI4QTExRTdCOTIyQTg0NjhEOUM4RjU2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUEyOTA4QzYxQjhBMTFFN0I5MjJBODQ2OEQ5QzhGNTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUEyOTA4QzcxQjhBMTFFN0I5MjJBODQ2OEQ5QzhGNTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6oFzHFAAAH6UlEQVR42uyc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" data-reactid=".23uigcxcrv6.1.0.0.1.0">
+						</a>
+						困难群众区块链信息统计系统
+					</span>
+				</div>
+				<div class="col_right" data-reactid=".23uigcxcrv6.1.0.1">
+					<!--<div class="col_right_left" data-reactid=".23uigcxcrv6.1.0.1.1">
+						<a class="" href="/warn" data-reactid=".23uigcxcrv6.1.0.1.1.0">
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0MENCQUI2MURCNzExRTdBREQxQkVDQjNFRUFCRUFEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0MENCQUI3MURCNzExRTdBREQxQkVDQjNFRUFCRUFEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDQwQ0JBQjQxREI3MTFFN0FERDFCRUNCM0VFQUJFQUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDQwQ0JBQjUxREI3MTFFN0FERDFCRUNCM0VFQUJFQUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5hFya8AAABX0lEQVR42qSUyUoDQRCGa0K8ZeaqB++i5hX0IPHsGsQlxItogr6KJvEVRF8luJyMJ9FcxISAKJqzbTVW408zlR71h4/pqW1qenqKjDGUQo7ZZS6YvvlRjzlnqkoepRk3mK4J64FZDxU8hYRL5pCZYWJhVmxXENfUCrYgaF97JaAG8Q2/4Bo4F7zECDqMPF8J8pZdwTHmTYx7KZ0UmHehkOI/kNwXJm8NO2K4VV4tgS4SJaYj/q0cEZXpW01Kl1HWqJZcywTnbEp5egwdxkrMtDuntsNxqf6kPD1S1iiXO5GnsD6ZD1iPlO1wIOtJJWbIJMJQiXG5fVuwLTfz9HfNybVtN3RbNrTzj49yJ/5Nd7BfR/xyoYJ1/2BbViCp9ItfbxHylvzh0ABnLcNwqEP8sTa+cOJcM0dMETosiu0G4k5CA9YOzccMA/aeWc0ysd2+VWXc96DIM3PGVLSt+BJgAOGG9ta+a5ezAAAAAElFTkSuQmCC" data-reactid=".23uigcxcrv6.1.0.1.1.0.0">
+							<span data-reactid=".23uigcxcrv6.1.0.1.1.0.1">信息统计预警</span>
+						</a>
+					</div>-->
+					<div class="col_right_right" data-reactid=".23uigcxcrv6.1.0.1.2">
+						<p data-reactid=".23uigcxcrv6.1.0.1.2.1">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg4NkJGMzVFMUI4RTExRTdCNEQ1OEQwRDkxOTFCODhFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg4NkJGMzVGMUI4RTExRTdCNEQ1OEQwRDkxOTFCODhFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODg2QkYzNUMxQjhFMTFFN0I0RDU4RDBEOTE5MUI4OEUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODg2QkYzNUQxQjhFMTFFN0I0RDU4RDBEOTE5MUI4OEUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6VnKRCAAABjklEQVR42ryWv0oDQRDG1wsKmgQto6BgIwmiAS0EtTGVWvkCdums0tj4BtZ2voBV0C4PoHCFFqIoGLARjEWKNAoavPUb2QObu539437wq3ZuPmZnbneFlFIYUAbLoAHOQA8MwAWom+TiBhbACfiS2foE+76NjyVPCTjwZVxR1UgD8z1d3kjotQvGBF8joKkL4hivCnNN+jCeE/8gjnHFIm/Z1bgBliyMq2ArdxB+Rztbz2Decje7YMHW+B1MWBp/gKLtVvcd5qfv0uPYwTh2MT51MM7/lnFkdqS5Oj6OzHOLarXf6KaaNANemIcNKQGz4NX15KIEbYNq2zpTbo+JknoIJJrrkGKKnJycrf6re7CYsfaQs2bV41TTqteFjPVv1duer9spVSvHVKi1lu+K6Wp8BFOauAGogTeXiulyWAdH4IZhKlTMNTgEK2BUVzG9kzbBBqirO7iq2VqOhuAJ3IFbcAmu6GdKf5VYhhN5lSL1IlwT4UReTTLeFuG1E6kpDK0aDRc9UcYDGw9/BBgAn1ULQTfoHhkAAAAASUVORK5CYII=" style="top:0px;left:0px;" data-reactid=".23uigcxcrv6.1.0.1.2.0">
+							
+							<span data-reactid=".23uigcxcrv6.1.0.1.2.1.0" id='username'></span>
+							<span data-reactid=".23uigcxcrv6.1.0.1.2.1.1"> / </span>
+							<span data-reactid=".23uigcxcrv6.1.0.1.2.1.2"> </span>
+							<a href="index.html">退出</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</header>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<!-- 页面内容 开发时删除 -->
+
+  
+<!-- content start -->
+ <script type="text/javascript" language="javascript"> 
+      var str = localStorage.getItem("lastname");
+    
+    var str2 = "JWT" + " " + str;
+
+      $.ajax({
+           type: "get",
+           url: "http://121.42.8.74:5500/api/statistics",
+           beforeSend: function(request) {
+               request.setRequestHeader("Authorization", str2);
+           },
+           dataType: "json",
+           //data:{Authorization:str2},
+           success: function(data){ 
+            console.log(data);
+              var s1=data.data.service.totalRecord;
+              var s2=data.data.service.totalMined;
+              var s3=data.data.service.totalInconsistency;
+              var s4=data.data.service.toBeApproved;
+              var s5=data.data.service.hacked;
+
+               //接受返回的数据，前端判断采取的动作
+               $('#s_1').html(s1);
+               $('#s_2').html(s2);
+               $('#s_3').html(s3);
+               $('#s_4').html(s4);
+               $('#s_5').html(s5);
+
+           }
+       });
+</script>
+
+<!-- <img class = "img2" src="" width="50" height="50"/>
+<img class = "img3" src="" width="50" height="50"/> -->
+<h2 style="text-align:center;"> 服务信息</h2>
+<div class="am-btn-group">
+  <button type="button" id="basics" class="am-btn am-btn-primary am-round">困难群众</button>
+  <button type="button" id="balance" class="am-btn am-btn-primary am-round">年度收支</button>
+  <button type="button" id="application" class="am-btn am-btn-primary am-round">救助申请</button>
+  
+</div>
+<script type="text/javascript">
+ $("#basics").on('click',function(){
+       
+        window.location.href="yujing-basic.html";
+        
+    });
+      $("#balance").click(function(){
+        window.location.href="yujing-balance.html";
+        
+    });
+    $("#application").click(function(){
+       
+        window.location.href="yujing-application.html";
+    });</script>
+<ul id='lo_box'>
+<li >
+   <span>收录信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img class = "img1" src="assets/i/green.png" width="10" height="10"/><span style="font-size:22px;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i id='s_1'></i></span>
+</li>
+<li >
+   <span>收录信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img class = "img1" src="assets/i/orange.png" width="10" height="10"/><span style="font-size:22px;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i id='s_2'></i></span>
+</li>&nbsp;&nbsp;&nbsp;&nbsp;
+<li>
+   <span>收录信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img class = "img1" src="assets/i/blue-small.png" width="10" height="10"/><span style="font-size:22px;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i id='s_3'></i></span>
+</li>
+  
+</ul>
+<div class="footer_cc">
+     <span style="font-size:22px;font-weight: bold;"><img class = "img1" src="assets/i/shape.png" width="15" height="15"/>&nbsp;<i id='s_4'></i></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span style="font-size:22px;font-weight: bold;"><img class = "img1" src="assets/i/no-shape.png" width="15" height="15"/>&nbsp;<i id='s_5'></i></span>
+   </br>
+     <span>&nbsp;待审核</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;非法篡改</span>
+  </div>
+<!-- content end -->
+
+<!-- 以上页面内容 开发时删除 -->
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+
+</body>
+</html>

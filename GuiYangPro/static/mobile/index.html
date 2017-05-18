@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>RedCloud BlockChain</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/cloud.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  
+  <script src="assets/js/jquery-3.1.1.js"></script>
+  
+   <link rel="stylesheet" href="assets/css/gooc-main.css">
+   
+   
+  
+   
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<!-- 页面内容 开发时删除 -->
+
+
+<div class="logo-box">
+  <br>
+  <img class="am-radius am-center" src="assets/i/cloud.png" width="94" height="47" />
+  <br>
+  <p class="logo-title am-text-center">BlockChain</p>
+</div>
+
+
+ <div data-tab-panel-0 class="am-tab-panel am-active">  
+      <form action="" class="am-form" data-am-validator>
+        <br>
+        <div class="am-form-group am-form-icon">
+          <i class="am-icon-user"></i>
+          <input type="number" class="am-form-field am-radius" id="username" minlength="11" placeholder="请输入用户姓名" required/>
+        </div>
+
+        <div class="am-form-group am-form-icon">
+          <i class="am-icon-keyboard-o"></i>
+          <input type="password" class="am-form-field am-radius" id="password"  placeholder="请输入密码" required/>
+        </div>
+          <button type="button" id="login" class="am-btn am-btn-primary am-btn-block am-radius">登录</button>
+        <br>
+      </form>
+    </div>
+
+<!-- 以上页面内容 开发时删除 -->
+
+
+ <script>
+       $("#login").click(function(){
+           var tel=$('#username').val();
+           var password=$('#password').val();
+           //这里实现对 username和password格式的判断
+           //........
+
+           //发送ajax请求 使用post方式发送json字符串给后台login
+           $.ajax({
+               type: "post",
+                url: "http://121.42.8.74:5500/api/auth/login",
+
+               dataType: "json",
+               data:{tel: tel, password: password },
+               success: function(data){
+
+                   //接受返回的数据，前端判断采取的动作
+                   if(data){
+                       if(data.message=="false"){
+//                           alert('密码错误，请重新输入');
+//                           window.location.href="login";
+                       }else{
+													
+						   var str = data.data.token;
+						   localStorage.setItem("lastname",str);
+
+                           window.location.href="list.html";
+                       }
+                   } else{
+                   }
+               }
+           });
+       });
+   </script>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+
+</body>
+</html>

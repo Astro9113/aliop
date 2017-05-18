@@ -1,0 +1,24 @@
+/* Write your styles */
+
+body{
+    /* background: #00acee; */
+}
+dl dd{  
+        margin-top:30px;  
+        height:0px;  
+        /* border:1px solid  #F00; /*颜色*/   */
+}  
+dl dd img{  
+        float:left;  
+		margin-left:10px;
+        /* border:1px solid  #F00; /*颜色*/   */
+}  
+dl dd a{  
+        line-height:0px;     /*注意这行代码，惹是不写，得不到想要的结果哦*/  
+        vertical-align:middle; 
+		
+		margin-left:20px;
+		font-size:20px;
+        /* border:1px solid  #F00; /*颜色*/   */
+        text-align:left;  
+}  

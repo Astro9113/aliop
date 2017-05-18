@@ -1,0 +1,46 @@
+.astro-personal-service {
+  border-top: 1px solid #ededed;
+  .astro-personal-service-title {
+    margin-left: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #ededed;
+    img {
+      margin-top: -10px;
+    }
+    p {
+      display: inline-block;
+      margin-left: 20px;
+      font-size: 24px;
+      color: #2b2c35;
+    }
+  }
+}
+
+.astro-personal-service-table{
+  //position: absolute;
+  //top: 78px;
+}
+.astro-personal-service-table-tr{
+  height: 80px;
+  th{
+    text-align: center;
+    span{
+      font-size: 24px;
+      color: #2b2c35;
+    }
+    p{
+      font-size: 14px;
+      color: #cccccc;
+      font-weight: 500;
+    }
+  }
+}
+.astro-personal-service-table-tbody{
+  tr{
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

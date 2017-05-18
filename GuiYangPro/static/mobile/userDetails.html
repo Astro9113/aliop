@@ -1,0 +1,895 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>RedCloud BlockChain</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/cloud.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+   <script src="assets/js/jquery-3.1.1.js"></script>
+   <script src="assets/js/jquery-jtemplates.js"></script>
+   
+  
+  <link rel="stylesheet" href="assets/css/red-annualExpenditure.css">
+  <link rel="stylesheet" href="assets/css/1.css" />
+		<link rel="stylesheet" href="assets/css/page.css" />
+		<script src="assets/js/page.js" type="text/javascript" charset="utf-8"></script>
+  
+
+</head>
+<body>
+				<header class="admin-header-list" id="appHeader" data-reactid=".23uigcxcrv6.1">
+					<div class="row" style="width:100%;" data-reactid=".23uigcxcrv6.1.0">
+						<div class="col_left" data-reactid=".23uigcxcrv6.1.0.0">
+							<span data-reactid=".23uigcxcrv6.1.0.0.2">
+								<a class="img_1" href="list.html" data-reactid=".23uigcxcrv6.1.0.0.1">
+									<img class="img_1"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAAAvCAYAAABqrH0KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlBMjkwOEM4MUI4QTExRTdCOTIyQTg0NjhEOUM4RjU2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlBMjkwOEM5MUI4QTExRTdCOTIyQTg0NjhEOUM4RjU2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUEyOTA4QzYxQjhBMTFFN0I5MjJBODQ2OEQ5QzhGNTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUEyOTA4QzcxQjhBMTFFN0I5MjJBODQ2OEQ5QzhGNTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6oFzHFAAAH6UlEQVR42uyc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" data-reactid=".23uigcxcrv6.1.0.0.1.0">
+								</a>
+								困难群众区块链信息统计系统
+							</span>
+						</div>
+						<div class="col_right" data-reactid=".23uigcxcrv6.1.0.1">
+							<div class="col_right_left" data-reactid=".23uigcxcrv6.1.0.1.1">
+								<a class="" href="yujing-basic.html" data-reactid=".23uigcxcrv6.1.0.1.1.0">
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0MENCQUI2MURCNzExRTdBREQxQkVDQjNFRUFCRUFEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0MENCQUI3MURCNzExRTdBREQxQkVDQjNFRUFCRUFEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDQwQ0JBQjQxREI3MTFFN0FERDFCRUNCM0VFQUJFQUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDQwQ0JBQjUxREI3MTFFN0FERDFCRUNCM0VFQUJFQUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5hFya8AAABX0lEQVR42qSUyUoDQRCGa0K8ZeaqB++i5hX0IPHsGsQlxItogr6KJvEVRF8luJyMJ9FcxISAKJqzbTVW408zlR71h4/pqW1qenqKjDGUQo7ZZS6YvvlRjzlnqkoepRk3mK4J64FZDxU8hYRL5pCZYWJhVmxXENfUCrYgaF97JaAG8Q2/4Bo4F7zECDqMPF8J8pZdwTHmTYx7KZ0UmHehkOI/kNwXJm8NO2K4VV4tgS4SJaYj/q0cEZXpW01Kl1HWqJZcywTnbEp5egwdxkrMtDuntsNxqf6kPD1S1iiXO5GnsD6ZD1iPlO1wIOtJJWbIJMJQiXG5fVuwLTfz9HfNybVtN3RbNrTzj49yJ/5Nd7BfR/xyoYJ1/2BbViCp9ItfbxHylvzh0ABnLcNwqEP8sTa+cOJcM0dMETosiu0G4k5CA9YOzccMA/aeWc0ysd2+VWXc96DIM3PGVLSt+BJgAOGG9ta+a5ezAAAAAElFTkSuQmCC" data-reactid=".23uigcxcrv6.1.0.1.1.0.0">
+									<span data-reactid=".23uigcxcrv6.1.0.1.1.0.1">信息统计预警</span>
+								</a>
+							</div>
+							<div class="col_right_right" data-reactid=".23uigcxcrv6.1.0.1.2">
+								<p data-reactid=".23uigcxcrv6.1.0.1.2.1">
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg4NkJGMzVFMUI4RTExRTdCNEQ1OEQwRDkxOTFCODhFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg4NkJGMzVGMUI4RTExRTdCNEQ1OEQwRDkxOTFCODhFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODg2QkYzNUMxQjhFMTFFN0I0RDU4RDBEOTE5MUI4OEUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODg2QkYzNUQxQjhFMTFFN0I0RDU4RDBEOTE5MUI4OEUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6VnKRCAAABjklEQVR42ryWv0oDQRDG1wsKmgQto6BgIwmiAS0EtTGVWvkCdums0tj4BtZ2voBV0C4PoHCFFqIoGLARjEWKNAoavPUb2QObu539437wq3ZuPmZnbneFlFIYUAbLoAHOQA8MwAWom+TiBhbACfiS2foE+76NjyVPCTjwZVxR1UgD8z1d3kjotQvGBF8joKkL4hivCnNN+jCeE/8gjnHFIm/Z1bgBliyMq2ArdxB+Rztbz2Decje7YMHW+B1MWBp/gKLtVvcd5qfv0uPYwTh2MT51MM7/lnFkdqS5Oj6OzHOLarXf6KaaNANemIcNKQGz4NX15KIEbYNq2zpTbo+JknoIJJrrkGKKnJycrf6re7CYsfaQs2bV41TTqteFjPVv1duer9spVSvHVKi1lu+K6Wp8BFOauAGogTeXiulyWAdH4IZhKlTMNTgEK2BUVzG9kzbBBqirO7iq2VqOhuAJ3IFbcAmu6GdKf5VYhhN5lSL1IlwT4UReTTLeFuG1E6kpDK0aDRc9UcYDGw9/BBgAn1ULQTfoHhkAAAAASUVORK5CYII=" style="top:0px;left:0px;" data-reactid=".23uigcxcrv6.1.0.1.2.0">
+									
+									<span data-reactid=".23uigcxcrv6.1.0.1.2.1.0" id='username'></span>
+									<span data-reactid=".23uigcxcrv6.1.0.1.2.1.1"> / </span>
+									<span data-reactid=".23uigcxcrv6.1.0.1.2.1.2"> </span>
+									<a  href="index.html"  data-reactid=".23uigcxcrv6.1.0.1.2.1.3">退出</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</header>
+
+			
+<!-- content start -->
+  <div class="admin-content">
+    <div class="admin-content-body">
+    	<div class="tab_eve">
+				<a href="javascript:;" class='btn_zan'>
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAjCAYAAACHIWrsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg4QkJCQkI5MUI4QTExRTdCOTU1REU3RjRCMTI0NUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg4QkJCQkJBMUI4QTExRTdCOTU1REU3RjRCMTI0NUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODhCQkJCQjcxQjhBMTFFN0I5NTVERTdGNEIxMjQ1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODhCQkJCQjgxQjhBMTFFN0I5NTVERTdGNEIxMjQ1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5VYHIoAAACrElEQVR42rSXSWgUQRSGazJRHKMY4sHlEA1OTqIkgijqSdwwXiTk5IIRBUUikosLOXpRQXEZUUQQBcF4EEEGRcWLyymnKARc0CCJBhQ0iutk/J/8DT9NZro60/PgS14tXX+q69V7nZS7WnSe1gj2gfVgPvvegnsgBwZ9Fkl5CKbAAXAUTC0x5zvoAadB2QVrPMTOg5NlxMzqwCnu1FUi2AX2SPsxaAMZUE//mYzvBfsn+krngNdc3OwK2AUKoXm14BLYwfYPsAAMx91ht4j1gd3jiJn95Vgf2xk+G+uVpkGntA9x4VJmY4el3ck1vAVbwEz678FDj4h/wLmOz7bEEcyK/yQq1Gk252mJNSIFZ4s/5PxN586KI/gndJ6+lg6dq7fgR/GbYgg2lVgjUvCF+Ct516JsElhRYo1IwQHwjn4DaPcQbOfcIKkPxL3458Q/DmaUmWtjx6Sdm0guvQhGpDTdkbup1sCxRrZH+Oy4Vu5sRpk7b7NqrALPwVkmcce+LrlGRT4zWkk9tKJ7xqOyjLFS5CopT8F5bIqo6IOcE1kPUzE+MaaADrABNIOf4A3z7E22Y31iLAHLwHXwxSVjC8FqcCMIwCBoWlm5J/PybktALMPgqufZLgefapj/rlHMye9KLS0byvKb53/QdHDrjq/yYEKC38B2KW1bwGIT3CqTTjAtJWW3QK/ciJ32Y6lM6HXJ2wXx2yxKi6HMU0hY0GLiF/2C7fB3aDBp0+QyZo0P0jG3CoLzxB82wX7pWFcFwTXi95tgXjp6pMwkYbbWEWnnLWimw3kpX1lWWi6DR+z/HDrnclbLmtnMlGalaprUyWyQSzfyzlQjaBz/4M22wyCC8nzXr6ogZmuuDY4uXJ7SDBz7L3cRo7ZOXkuUfeV/T0MMxrvgvt7tfwIMAG9IkhVx4OmHAAAAAElFTkSuQmCC" >
+					  <p >基本信息</p>
+				</a>
+				<a href="javascript:;" class='btn_zan'>
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAZCAYAAAC7OJeSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhCNDIwRkI0MUI4QTExRTdBMkQ1QjE1MkUxNDYzMTIwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhCNDIwRkI1MUI4QTExRTdBMkQ1QjE1MkUxNDYzMTIwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEI0MjBGQjIxQjhBMTFFN0EyRDVCMTUyRTE0NjMxMjAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEI0MjBGQjMxQjhBMTFFN0EyRDVCMTUyRTE0NjMxMjAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7X5WfqAAAB80lEQVR42uzVTyhlURzA8euNodH4k2Jjq/zbCGWYxfMvO4SImlBYzWbKwtpmVhM2YyELlDKDkiJ/FkiZ/M2CmoSymImZMmVkIXm+p363OW7vPvc+eq+JU59673fuue/XOb/zexHGsM8I48hGL+rw2xPGRJqwCi9G8CIcyUThM4bwSmL5yIgM4mURCPZsUzCGAi22hxrsu92ZdGyjMohEimStnsgXvFGJqC9uklFFtiFF9xWlLnayAwtIlti1xBpwYT7oJJmX6JEEXkssGlMovGeten4Un2CWxCnK0G192OPgjBfxwc9cDGaQY7M2DWuo12LfkItlfwsCJVMsZ/xWi00iD7/kezxmkWVZW411ZGqxPqmbH3Y/6LE5404/Z9wpVb8l23wmc0mYR6rqFfiICcTJ/CWa8R5XgYvrbgdOwCCqtNgJGrFkWat6w5zsjhrHOLAU9hFqseOs0v8lky09IFWbX5GK/2mz3it1E+NnTsXf4Y/T62oeU4u0ZjMRn9ygkgCJGFKItZbtv0EXKtwkYsh160e7FjtHK8YdvmNWjlFd/b+yG9MuctjUj0kvml1pbt+D6LBVsv7Q5TqfXTKxekcM0fDZXe1QJ+KqA4d0RD7Se9pQLp8HpAmGLZkcKXxD/sv+/2N6TuZJ3aaHjETzw60AAwBJQmOvjW8SxwAAAABJRU5ErkJggg==">
+				  	<p>年度收入支出</p>
+				</a>
+				<a href="javascript:;" class='btn_zan'>
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAjCAYAAACOysqWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhEOUVGRDAzMUI4QTExRTc4MkY5ODBGNDY5QUM4MUIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhEOUVGRDA0MUI4QTExRTc4MkY5ODBGNDY5QUM4MUIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEQ5RUZEMDExQjhBMTFFNzgyRjk4MEY0NjlBQzgxQjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEQ5RUZEMDIxQjhBMTFFNzgyRjk4MEY0NjlBQzgxQjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz57yK+AAAACFElEQVR42syXSytFURTH9z2UMkJCKXlEMVBe+QKMKCRM+AQoBjK8KTMTFAkTSiFCFN+ASCYyRMozobwiHP/F/2Y7nXucc++5ZdWv1n6ttffa66x9b0BNm8pGZkALiFPu5B3MglbrQMDGQRq4VJFJOrjSOwybSTJhCrx5MPzGNVduTuCrxFvaySDLpt/LSU7ArdVBJhgGdR4u1unCV0AnOJMQpULZ5c79FDlJmZygTzP+AQ7AS4RGE0ARk0dsBuMZlpA0g8Uod94IFqg3SIg+vrLpW+J4imjE4D2ImIZmXPlg3GojYKgYixcHBeAIHFL33YEUv2yQQ913B4lhdE+lws5oBvUkrV/0XOoX4CmcAUlT81f7RyQcOyD1j01cgwpwrPWZbkJU6sK44pySSEK0zpetkhtJ0cJ0B26Y81tgI5JLfuYTmA/ywJg2NsY+GWvj3KizKOYf2oWmn/uVprpMMCwik24XOaVpNGL+yzuIuQODr1+Nl3WGyznylO6DZbBGvcnNesMxAZSqB3tgDhRqY6LPc6zeKTnCOahloVsCxVr/HQlJMedsM3R/OqgGm2BVftNo/fegn49NLvUHbbycoZO1VU7fgVUewQgYYFm2VtEe0OH0ABkOhW6QX26vjfHQO9DLEw2FK3ji4FVrv3LHUiW7Xf5PkDldXDNqsfciDoLgFIxzUgfbXkXWtPMXxwTbwU8BBgDGJXb3Jzpw0gAAAABJRU5ErkJggg==">
+					  <p>救助资金申请</p>
+				</a>
+				<a href="javascript:;" class='btn_zan'>
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAjCAYAAAAaLGNkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhGQzg5MUY3MUI4QTExRTdBRjQ1QkNCQTdFQUNEOTIzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhGQzg5MUY4MUI4QTExRTdBRjQ1QkNCQTdFQUNEOTIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEZDODkxRjUxQjhBMTFFN0FGNDVCQ0JBN0VBQ0Q5MjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEZDODkxRjYxQjhBMTFFN0FGNDVCQ0JBN0VBQ0Q5MjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz63Dl1iAAACj0lEQVR42tSXTUhVQRTH73uJgUQgauBCFz5qZeFCygJFFDQqs7DaiLYOkoIgw+dGRARXRW1CItA2kRRY0a6FadCmkPIDUSMJrMQEFUHxo/+B/4XD8/Xe3PvuPPTAjzt3Zu7M/87HmTMhp2/H8WhHQBOoA8UgByyCb+A16Ad/vDQY8iAiDO6CKDiUoN4q6AI9YNu0YRPLAi9BdxIBDsu7WT8rKBEh0AfqVd4X0AwKwEE+m5nvWj2/CwUh4ipoUO8y1KWc+59gg89+5nepug38PqU1ISKnQITvj0CLgfCH4CbTM+BYovWRbCQqlQBZ8W2Ga6hN7ZAI2/E9HRUq/QKsGIpYYX3XylMRUaTSnz36E10/koqIAyq94FHEwn/a8e0nHFPH46d+2NkDtidEZMTJyyaOgYsOXMQ10A6OW+jnIp2W2G8wBB6AeT0dneC5JQHuiBaR06AVTIJadyTOcQRcWwO/VOxga0oO86Q9ISNxSxW8Bfl0LsJgQB0Osr2j4Ar4oUKEqIxEmap8Ayxb+GsJdGaZnuZaGOF7rYxEpqq8lKZdqV16nogYVRnRNImoU+k5mY6n4BQz7vHYHQeb4GRAnRYyuAkzONbrcECCGjlc3oCzSRq6wIVraufZbiKTiKxElG2BS3QeG2n01mOgWq4LrsdcB7dBB3dLfhyX/jWFDufApxiP+YpTvqsj2R3vLPz1MGjcd6eo+e3Ncc7QC0pE/jGmPFelt2yIyJOtFRMIv+c2/KsuP67N2ghqHscIEKsCT0ANeAYuqzBvIKgLsWs5vFOY/kDSC1PY51SYficjc8fGwvzOrZwdp2yNh9M4p+SDrd2xTqd2P06ZOLzedEXb4uKvM0QTrzfB914/jf0TYABQ3IMRC85AyAAAAABJRU5ErkJggg==">
+					  <p>服务</p>
+				</a>
+			</div>
+     <script type="text/javascript">
+			function GetQueryString(name)
+				{
+				     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+				     var r = window.location.search.substr(1).match(reg);
+				     if(r!=null)return  unescape(r[2]); return null;
+				}
+		</script>
+  
+    <script type="text/javascript" language="javascript">  
+   $(function() {    
+    //初始化JSON数据    
+		   var str = localStorage.getItem("lastname");
+			 var str2 = "JWT" + " " + str;
+		   var id=GetQueryString('id');
+//		   alert(id);
+		    $.ajax({
+               type: "get",
+               url: "http://121.42.8.74:5500/api/candidates/"+id,
+								beforeSend: function(request) {
+								 request.setRequestHeader("Authorization", str2);
+							  },
+               success: function(data){
+//             		console.log(data);
+               		console.log(data); 
+//	$("#template").tmpl(data.data.basics.meta).appendTo("#info"); 
+
+				         $("#result").setTemplateElement("template");    
+			    			// 给模板加载数据    
+			    			//处理出生日期
+			    			data.data.basics.meta.birth=data.data.basics.meta.birth.substring(0,10);
+			    			$("#result").processTemplate(data.data.basics);    
+			    			
+			    			 $("#result1").setTemplateElement("template1"); 
+			    			 $("#result1").processTemplate(data.data.balance);  
+			    			 for(var t=0;t<data.data.application.length;t++){
+			    			 		data.data.application[t]['meta']['helpAskedOn']=data.data.application[t]['meta']['helpAskedOn'].substring(0,10);
+										data.data.application[t]['meta']['paymentDue']=data.data.application[t]['meta']['paymentDue'].substring(0,10);
+			    			 }
+			    			  $("#result2").setTemplateElement("template2"); 
+			    			 $("#result2").processTemplate(data.data.application); 
+			    			 
+			    			 
+			    			 for(var c=0;c<data.data.service.length;c++){
+			    			 		data.data.service["c"]['info']['initialCreatedOn']=data.data.service["c"]['info']['initialCreatedOn'].substring(0,10);
+			    			 }
+			    			  $("#result3").setTemplateElement("template3"); 
+			    			 $("#result3").processTemplate(data.data.service); 
+			    			 // 附上模板    
+				      }
+      		});
+			   
+			   
+			   
+//			   	$('.q_1').on('click',function(){
+//			   		var str = localStorage.getItem("lastname");
+//			 			var str2 = "JWT" + " " + str;
+//			 			id='096e2070-3854-11e7-9339-41e09e4f0229';
+//			 			var typeone='balances';
+//							$.ajax({
+//	               type: "get",
+//	               url: "http://121.42.8.74:5500/api/"+typeone+'/'+id+'/blockchainInfo',
+//	               //121.42.8.74:5500/api/basics/9ca53cc0-36d8-11e7-9eb2-cb6b376c93aa/blockchainInfo
+//									beforeSend: function(request) {
+//									 request.setRequestHeader("Authorization", str2);
+//								  },
+//	               success: function(data){
+//	//             		console.log(data);
+//	               		console.log(data); 
+//				    			 // 附上模板    
+//					      }
+//	      	});
+//				})
+	   });     
+	</script> 
+	<script>
+		$('.btn_zan').on('click',function(){
+			var index=$(this).index();
+		for(var i=0;i<4;i++){
+			$('.tt').eq(i).hide()
+		}
+			$('.tt').eq(index).show();
+		})
+	</script> 
+	<!--<button class='q_1'>区块链</button>-->
+		<div class="container">  
+			
+        <div id="result" class='tt' ></div>
+        	<textarea id="template" style="display:none">
+        		<div id='tem'>
+					   <dl>  
+	        		 <dd><img src="assets/i/personalInfo.png" width="28" height="35" /><a href="#">基本信息</a></dd>           
+	    	 			</dl> 
+	    	 			<hr>
+	    	 			<a href="qukuai.html?typeone=basics&tid={$T['_id']}" class="am-btn am-btn-secondary q_q q_1">区块链</a>
+	    	 			
+	    	 			
+					   <table class="am-table am-table-bordered am-table-radius am-table-striped">
+					    <thead>
+					        <tr>
+					            <th>字段</th>
+					            <th>状态</th>
+					            <th>字段</th>
+					            <th>状态</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					      
+					        <tr>
+					            <td>姓名</td>
+					            <td>{$T.meta.name}</td>  
+					            <td>身份证号</td>
+					            <td>{$T.meta.identifier}</td>  
+					        </tr>
+					        <tr>
+					            <td>性别</td>
+					            <td>{$T.meta.sex}</td>  
+					            <td>出生日期</td>
+					            <td>{$T.meta.birth}</td>  
+					        </tr>
+					        <tr>
+					            <td>民族</td>
+					            <td>{$T.meta.nationality}</td>  
+					            <td>类别</td>
+					            <td>{$T.meta.category}</td>  
+					        </tr>
+					        <tr>
+					            <td>所属居委会</td>
+					            <td>{$T.meta.community}</td>  
+					            <td>政治面貌</td>
+					            <td>{$T.meta.politicalStatus}</td>  
+					        </tr>
+					        <tr>
+					            <td>婚姻状况</td>
+					            <td>{$T.meta.maritalStatus}</td>  
+					            <td>户口类别</td>
+					            <td>{$T.meta.residenceCategory}</td>  
+					        </tr>
+					        <tr>
+					            <td>户口地址</td>
+					            <td>{$T.meta.residenceAddr}</td>  
+					            <td>家庭地址</td>
+					            <td>{$T.meta.homeAddr}</td>  
+					        </tr>
+					        <tr>
+					            <td>工作单位</td>
+					            <td>{$T.meta.company}</td>  
+					            <td>月收入</td>
+					            <td>{$T.meta.salaryPerMonth}</td>  
+					        </tr>
+					        <tr>
+					            <td>文化程度</td>
+					            <td>{$T.meta.educationLevel}</td>  
+					            <td>联系电话</td>
+					            <td>{$T.meta.contactPhone}</td>  
+					        </tr>
+					        <tr>
+					            <td>电话属性</td>
+					            <td>{$T.meta.contactRelation}</td>  
+					            <td>籍贯</td>
+					            <td>{$T.meta.ancientPlace}</td>  
+					        </tr>
+					        <tr>
+					            <td>生活自理程度</td>
+					            <td>{$T.meta.selfCareLevel}</td>  
+					            <td>监护人</td>
+					            <td>{$T.meta.custodian}</td>  
+					        </tr>
+					        <tr>
+					            <td>监护人与本人关系</td>
+					            <td>{$T.meta.custodianRelation}</td>  
+					            <td>监护人电话</td>
+					            <td>{$T.meta.custodianPhone}</td>  
+					        </tr>
+					        <tr>
+					            <td>家庭人数</td>
+					            <td>{$T.meta.familyQTY}</td>  
+					            <td>家庭特殊情况</td>
+					            <td>{$T.meta.familySpecialCondition}</td>  
+					        </tr>
+					        <tr>
+					            <td>二级残疾人证</td>
+					            <td>{$T.meta.disabilityCertificate}</td>  
+					            <td>残疾证号</td>
+					            <td>{$T.meta.certificateNum}</td>  
+					        </tr>
+					        <tr>
+					            <td>办证日期</td>
+					            <td>{$T.meta.certificateIssuedOn}</td>  
+					            <td>残疾类别</td>
+					            <td>{$T.meta.disabilityCategory}</td>  
+					        </tr>
+					        <tr>
+					            <td>残疾等级</td>
+					            <td>{$T.meta.disabilityLever}</td>  
+					            <td>残疾原因</td>
+					            <td>{$T.meta.disabilityReason}</td>  
+					        </tr>
+					        <tr>
+					            <td>残疾状况描述</td>
+					            <td>{$T.meta.disabilityDesc}</td>  
+					            <td>自评健康状况</td>
+					            <td>{$T.meta.selfEvalHealthStatus}</td>  
+					        </tr>
+					        <tr>
+					            <td>评定方式</td>
+					            <td>{$T.meta.evaluationMethod}</td>  
+					            <td>家庭拥有彩色电视机</td>
+					            <td>{$T.meta.haveColorTV}</td>  
+					        </tr>
+					        <tr>
+					            <td>个人生活来源</td>
+					            <td>{$T.meta.mainLivingIncome}</td>  
+					            <td>家庭经济状况</td>
+					            <td>{$T.meta.familyEconStatus}</td>  
+					        </tr>
+					        <tr>
+					            <td>学业状态</td>
+					            <td>{$T.meta.eduStatus}</td>  
+					            <td>是否接受义务教育</td>
+					            <td>{$T.meta.isCompulsoryEducated}</td>  
+					        </tr>
+					        <tr>
+					            <td>未入学原因</td>
+					            <td>{$T.meta.uneducatedReason}</td>  
+					            <td>就读学校类别</td>
+					            <td>{$T.meta.schoolCategory}</td>  
+					        </tr>
+					        <tr>
+					            <td>就读班级类型</td>
+					            <td>{$T.meta.classCategory}</td>  
+					            <td>享受教育补贴</td>
+					            <td>{$T.meta.eduAllowance}</td>  
+					        </tr>
+					        <tr>
+					            <td>奖励情况</td>
+					            <td>{$T.meta.awards}</td>  
+					            <td>是否就业</td>
+					            <td>{$T.meta.employed}</td>  
+					        </tr>
+					        <tr>
+					            <td>劳动就业能力</td>
+					            <td>{$T.meta.laborAbility}</td>  
+					            <td>失业登记</td>
+					            <td>{$T.meta.joblessReg}</td>  
+					        </tr>
+					        <tr>
+					            <td>未就业原因</td>
+					            <td>{$T.meta.joblessReason}</td>  
+					            <td>就业形式</td>
+					            <td>{$T.meta.jobCategory}</td>  
+					        </tr>
+					        <tr>
+					            <td>所属行业</td>
+					            <td>{$T.meta.industry}</td>  
+					            <td>单位性质</td>
+					            <td>{$T.meta.companyCate}</td>  
+					        </tr>
+					        <tr>
+					            <td>用工形式</td>
+					            <td>{$T.meta.contractCategory}</td>  
+					            <td>工作类型</td>
+					            <td>{$T.meta.partTime}</td>  
+					        </tr>
+					        <tr>
+					            <td>技能等级</td>
+					            <td>{$T.meta.skillLevel}</td>  
+					            <td>职业资格类别</td>
+					            <td>{$T.meta.professionCategory}</td>  
+					        </tr>
+					        <tr>
+					            <td>职业资格等级</td>
+					            <td>{$T.meta.professionLevel}</td>  
+					            <td>医疗保障</td>
+					            <td>{$T.meta.healthInsurance}</td>  
+					        </tr>
+					        <tr>
+					            <td>医疗保障缴纳方式</td>
+					            <td>{$T.meta.healthInsuranceMethod}</td>  
+					            <td>医疗费性质</td>
+					            <td>{$T.meta.healthInsuranceCategory}</td>  
+					        </tr>
+					        <tr>
+					            <td>养老保险</td>
+					            <td>{$T.meta.endowmentInsurance}</td>  
+					            <td>养老保险缴纳方式</td>
+					            <td>{$T.meta.endowmentInsuranceMethod}</td>  
+					        </tr>
+					        <tr>
+					            <td>其它社会保险</td>
+					            <td>{$T.meta.otherSocialInsurance}</td>  
+					            <td>生活保障形式</td>
+					            <td>{$T.meta.lifeGuaranteeMethod}</td>  
+					        </tr>
+					        <tr>
+					            <td>享受低保情况</td>
+					            <td>{$T.meta.basicLivingAllow}</td>  
+					            <td>纳入保障日期</td>
+					            <td>{$T.meta.basicLivingAllowOn}</td>  
+					        </tr>
+					        <tr>
+					            <td>保障人口</td>
+					            <td>{$T.meta.basicLivingAllowPopuQty}</td>  
+					            <td>住房来源</td>
+					            <td>{$T.meta.houseSource}</td>  
+					        </tr>
+					        <tr>
+					            <td>自有住房人均面积</td>
+					            <td>{$T.meta.livingAreaPerPerson}</td>  
+					            <td>是否危房</td>
+					            <td>{$T.meta.houseStatus}</td>  
+					        </tr>
+					        <tr>
+					            <td>房屋结构</td>
+					            <td>{$T.meta.houseStructure}</td>  
+					            <td></td>
+					            <td></td>  
+					        </tr>
+					        
+							
+					    </tbody>
+						</table>
+					</div>
+				</textarea> 
+				<script>
+				
+						
+				</script>
+				<div id="result1" class='tt' ></div>
+				<textarea id="template1" style="display:none">
+        		<div id='tem'>
+					   <dl>  
+	        		 <dd><img src="assets/i/personalInfo.png" width="28" height="35" /><a href="#">年度收入支出</a></dd>           
+	    	 			</dl> 
+	    	 			<hr>
+	    	 			 
+	    	 			
+					   <table class="am-table am-table-bordered am-table-radius am-table-striped">
+					    <thead>
+					        <tr>
+					            <th>年份</th>
+					            <th>个人\家庭</th>
+					            <th>消费\食品</th>
+					            <th>低保情况</th>
+					        <tr>
+					        		<th>重残补贴</th>
+					            <th>家月收入</th>
+					            <th>救助金额</th>
+					            <!--<th>状态</th>-->
+											<th>区块链</th>					            
+					        </tr>
+					        </tr>
+					    </thead>
+					    <tbody>
+					      
+									{#foreach $T as record}  
+							    <tr>  
+							      <td>{$T.record.meta.year}</td>  
+							      <td>{$T.record.meta.lastYearTotalIncome}\{$T.record.meta.lastYearTotalIncomeFamily}</td>  
+							       <td>{$T.record.meta.nonproductiveExpenditureFamily}\{$T.record.meta.foodExpenditureFamily}</td>
+							      <td>{$T.record.meta.basicLivingAllowance}</td>  
+							        <!--2通过  3驳回  1审核-->
+							    </tr>  
+							    <tr>
+							    	 <td>{$T.record.meta.heavilyDisabledAllowance}</td>  
+							       <td>{$T.record.meta.monthlyIncomeFamily}</td> 
+							        <td>{$T.record.meta.classifiedAllowance}</td> 
+							        <!--<td>{$T.record.approvalStatus}</td> 状态-->
+							        <td><a href="qukuai.html?typeone=balances&tid={$T.record._id}" class="am-btn am-btn-secondary  q_2">区块链</a></td>
+							    </tr>
+							    {#/for}  					    
+					    </tbody>
+						</table>
+					</div>
+				</textarea>
+		
+				<div id="result2" class='tt'></div>
+				<textarea id="template2" style="display:none">
+        		<div id='tem'>
+					   <dl>  
+	        		 <dd><img src="assets/i/personalInfo.png" width="28" height="35" /><a href="#">救助资金申请</a></dd>           
+	    	 			</dl> 
+	    	 			<hr>
+	    	 			
+	    	 			
+					   <table class="am-table am-table-bordered am-table-radius am-table-striped">
+					    <thead>
+					        <tr>
+					        		<!--<th rowspan="2" style="line-height:180px;">银行帐号</th>-->
+					            <th>求助时间</th>
+					            <th width='10px'>付款人</th>
+									    <th>救助事由</th> 
+									    <th>医疗总费</th>
+									    <th>救助金额</th>
+					        </tr>
+					         <tr>
+					         		 <th>支付时间</th>
+					            <th>收款人</th>
+					            <th>疾病名称</th>
+					            <th>本人承担</th>
+					            <!--<th>状态</th>-->
+					            <th>区块链</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					    	{#foreach $T as record}  
+										<tr>
+					      				<!--<td>{$T.record.meta.bankAccountNum}</td>-->  
+					      				<td>{$T.record.meta.helpAskedOn}</td>
+					      				<td>{$T.record.meta.payer}</td> 
+					      				<td>{$T.record.meta.helpAskedReason}</td> 
+					      				<td>{$T.record.meta.totalExpenditure}</td> 
+					      				<td>{$T.record.meta.govAllowance}</td> 
+					      			</tr>
+					       			<tr>
+					       				<td>{$T.record.meta.paymentDue}</td> 
+					       				<td>{$T.record.meta.recipient}</td> 
+					       				<td>{$T.record.meta.deseaseName}</td> 
+					       				<td>{$T.record.meta.selfExpenseQTY}</td> 
+					       				<!--<td>{$T.record.approvalStatus}</td>--> 
+					       				<td><a href="qukuai.html?typeone=applications&tid={$T.record._id}" class="am-btn am-btn-secondary q_q q_3" >区块链</a></td>
+					       			</tr>
+    						{#/for} 
+					      			
+					    </tbody>
+						</table>
+					</div>
+				</textarea>
+		
+				<div id="result3" class='tt'></div>
+				<textarea id="template3" style="display:none">
+        		<div id='tem'>
+					   <dl>  
+	        		 <dd><img src="assets/i/personalInfo.png" width="28" height="35" /><a href="#">服务信息</a></dd>           
+	    	 			</dl> 
+	    	 			<hr>
+	    	 			
+					   <table class="am-table am-table-bordered am-table-radius am-table-striped">
+					    <thead>
+					        <tr>
+					            <th>服务名称</th>
+					            <th>现有服务</th>
+					             <th>服务需求</th>
+					            <th>更新日期</th>
+					            <th>状态</th>
+					            <th>操作</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					      
+					        <tr>
+					            <td>辅助器具</td>
+					           <td>{$T.equipment
+.available[0]}</td>  
+					            <td>{$T.equipment
+.requested[0]}</td>  
+					            <td>{$T.equipment
+.info.initialCreatedOn}</td> 
+					            <td>{$T.equipment
+.info.approvalStatus}</td> 
+											<td><a href="qukuai.html?typeone=services&keyword=equipment&tid={$T._id}" class="q_4">区块链</a></td>
+												
+					        </tr>
+					         <tr>
+					            <td>康复医疗</td>
+					            <td>{$T.rehabilitation
+.available[0]}</td>  
+					            <td>{$T.rehabilitation
+.requested[0]}</td>  
+					            <td>{$T.rehabilitation
+.info.initialCreatedOn}</td> 
+					            <td>{$T.rehabilitation
+.info.approvalStatus}</td>
+											<td><a href="qukuai.html?typeone=services&keyword=rehabilitation&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>康复指导</td>
+					            <td>{$T.rehabilitationGuide
+.available[0]}</td>  
+					            <td>{$T.rehabilitationGuide
+.requested[0]}</td>  
+					            <td>{$T.rehabilitationGuide
+.info.initialCreatedOn}</td> 
+					            <td>{$T.rehabilitationGuide
+.info.approvalStatus}</td> 
+										<td><a href="qukuai.html?typeone=services&keyword=rehabilitationGuide&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>重点康复救助服务</td>
+					          <td>{$T.rehabilitationVIP
+.available[0]}</td>  
+					            <td>{$T.rehabilitationVIP
+.requested[0]}</td>  
+					            <td>{$T.rehabilitationVIP
+.info.initialCreatedOn}</td> 
+					            <td>{$T.rehabilitationVIP
+.info.approvalStatus}</td> 
+											<td><a href="qukuai.html?typeone=services&keyword=rehabilitationVIP&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>视力</td>
+					            <td>{$T.vision
+.available[0]}</td>  
+					            <td>{$T.vision
+.requested[0]}</td>  
+					            <td>{$T.vision
+.info.initialCreatedOn}</td> 
+					            <td>{$T.vision
+.info.approvalStatus}</td>
+					<td><a href="qukuai.html?typeone=services&keyword=vision&tid={$T._id}" class="q_4">区块链</a></td>
+					
+					        </tr>
+					         <tr>
+					            <td>听力</td>
+					            <td>{$T.listening
+.available[0]}</td>  
+					            <td>{$T.listening
+.requested[0]}</td>  
+					            <td>{$T.listening
+.info.initialCreatedOn}</td> 
+					            <td>{$T.listening
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=listening&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>言语</td>
+					            <td>{$T.linguistic
+.available[0]}</td>  
+					            <td>{$T.linguistic
+.requested[0]}</td>  
+					            <td>{$T.linguistic
+.info.initialCreatedOn}</td> 
+					            <td>{$T.linguistic
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=linguistic&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>肢体</td>
+					           <td>{$T.body
+.available[0]}</td>  
+					            <td>{$T.body
+.requested[0]}</td>  
+					            <td>{$T.body
+.info.initialCreatedOn}</td> 
+					            <td>{$T.body
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=body&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>智力</td>
+					         <td>{$T.intelligence
+.available[0]}</td>  
+					            <td>{$T.intelligence
+.requested[0]}</td>  
+					            <td>{$T.intelligence
+.info.initialCreatedOn}</td> 
+					            <td>{$T.intelligence
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=intelligence&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>精神</td>
+					            <td>{$T.mind
+.available[0]}</td>  
+					            <td>{$T.mind
+.requested[0]}</td>  
+					            <td>{$T.mind
+.info.initialCreatedOn}</td> 
+					            <td>{$T.mind
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=mind&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>就业服务</td>
+					           <td>{$T.job
+.available[0]}</td>  
+					            <td>{$T.job
+.requested[0]}</td>  
+					            <td>{$T.job
+.info.initialCreatedOn}</td> 
+					            <td>{$T.job
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=job&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>住房</td>
+					            <td>{$T.accommodation
+.available[0]}</td>  
+					            <td>{$T.accommodation
+.requested[0]}</td>  
+					            <td>{$T.accommodation
+.info.initialCreatedOn}</td> 
+					            <td>{$T.accommodation
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=accommodation&tid={$T._id}" class="q_4">区块链</a></td>
+					            
+					        </tr>
+					         <tr>
+					            <td>小额贷款</td>
+					        <td>{$T.loan
+.available[0]}</td>  
+					            <td>{$T.loan
+.requested[0]}</td>  
+					            <td>{$T.loan
+.info.initialCreatedOn}</td> 
+					            <td>{$T.loan
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=loan&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>增收项目</td>
+					           <td>{$T.added
+.available[0]}</td>  
+					            <td>{$T.added
+.requested[0]}</td>  
+					            <td>{$T.added
+.info.initialCreatedOn}</td> 
+					            <td>{$T.added
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=added&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>实用技术培训</td>
+					          <td>{$T.skillTraining
+.available[0]}</td>  
+					            <td>{$T.skillTraining
+.requested[0]}</td>  
+					            <td>{$T.skillTraining
+.info.initialCreatedOn}</td> 
+					            <td>{$T.skillTraining
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=skillTraining&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>托养</td>
+					            <td>{$T.custodian
+.available[0]}</td>  
+					            <td>{$T.custodian
+.requested[0]}</td>  
+					            <td>{$T.custodian
+.info.initialCreatedOn}</td> 
+					            <td>{$T.custodian
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=custodian&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>保险</td>
+					            <td>{$T.insurance
+.available[0]}</td>  
+					            <td>{$T.insurance
+.requested[0]}</td>  
+					            <td>{$T.insurance
+.info.initialCreatedOn}</td> 
+					            <td>{$T.insurance
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=insurance&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>补贴</td>
+					          <td>{$T.allowance
+.available[0]}</td>  
+					            <td>{$T.allowance
+.requested[0]}</td>  
+					            <td>{$T.allowance
+.info.initialCreatedOn}</td> 
+					            <td>{$T.allowance
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=allowance&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>生活物品</td>
+					          <td>{$T.grocessory
+.available[0]}</td>  
+					            <td>{$T.grocessory
+.requested[0]}</td>  
+					            <td>{$T.grocessory
+.info.initialCreatedOn}</td> 
+					            <td>{$T.grocessory
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=grocessory&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>法律援助或司法救助</td>
+					           <td>{$T.legal
+.available[0]}</td>  
+					            <td>{$T.legal
+.requested[0]}</td>  
+					            <td>{$T.legal
+.info.initialCreatedOn}</td> 
+					            <td>{$T.legal
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=legal&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>家庭无障碍改造</td>
+					           <td>{$T.house
+.available[0]}</td>  
+					            <td>{$T.house
+.requested[0]}</td>  
+					            <td>{$T.house
+.info.initialCreatedOn}</td> 
+					            <td>{$T.house
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=house&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>信息无障碍产品和服务</td>
+					       <td>{$T.information
+.available[0]}</td>  
+					            <td>{$T.information
+.requested[0]}</td>  
+					            <td>{$T.information
+.info.initialCreatedOn}</td> 
+					            <td>{$T.information
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=information&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>图书借阅</td>
+					          <td>{$T.book
+.available[0]}</td>  
+					            <td>{$T.book
+.requested[0]}</td>  
+					            <td>{$T.book
+.info.initialCreatedOn}</td> 
+					            <td>{$T.book
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=book&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>培养培训</td>
+					            <td>{$T.musical
+.available[0]}</td>  
+					            <td>{$T.musical
+.requested[0]}</td>  
+					            <td>{$T.musical
+.info.initialCreatedOn}</td> 
+					            <td>{$T.musical
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=musical&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					         <tr>
+					            <td>文艺活动</td>
+					            <td>{$T.entertainment
+.available[0]}</td>  
+					            <td>{$T.entertainment
+.requested[0]}</td>  
+					            <td>{$T.entertainment
+.info.initialCreatedOn}</td> 
+					            <td>{$T.entertainment
+.info.approvalStatus}</td> 
+<td><a href="qukuai.html?typeone=services&keyword=entertainment&tid={$T._id}" class="q_4">区块链</a></td>
+					        </tr>
+					       
+					    </tbody>
+						</table>
+					</div>
+				</textarea>
+		
+		</div> 
+    
+	
+
+
+    </div>
+
+    <footer class="admin-content-footer">
+				<hr>
+				<p style="width:30vw;margin:0 auto;"><a href="">电脑版</a>|<a href="">触屏版</a></p>
+				<p class="am-padding-left">© 2017 AllMobilize 备案号：京-JG1000000</p>
+			</footer>
+
+</div>
+  <!-- content end -->
+
+<!-- 以上页面内容 开发时删除 -->
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+
+</body>
+</html>

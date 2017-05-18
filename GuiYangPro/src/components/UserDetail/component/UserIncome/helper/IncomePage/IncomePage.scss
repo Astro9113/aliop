@@ -1,0 +1,26 @@
+.astro-home-page{
+  color: #cccccc;
+  font-size: 16px;
+  display: inline-block;
+  height: 60px;
+  width: 95%;
+  margin-top: 10px;
+  p{
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+  }
+}
+.astro-home-page-span{
+  color: #0081f4;
+}
+
+.astro-home-pageNum{
+  display: inline-block;
+  margin: 0;
+  float: right;
+  a {
+    font-size: 12px;
+    cursor: -webkit-grab;
+  }
+}

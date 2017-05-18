@@ -1,0 +1,67 @@
+/* Write your styles */
+
+body{
+    background: #00acee;
+}
+.logo-box{
+    padding: 2em;
+}
+.logo-title{
+    font-size: 2em;
+    color: #FFFFFF;
+    margin-top: 0px;
+    font-weight: 500;
+}
+.am-tabs-d2 .am-tabs-nav{
+    background: #00acee;
+}
+.am-tabs-d2 .am-tabs-nav>.am-active{
+    background: #00acee;
+    border-bottom:2px solid #FFFFFF;
+}
+.am-tabs-bd{
+    border: none;
+}
+.am-tabs-d2 .am-tabs-nav a{
+    color: #FFFFFF;
+}
+.am-tabs-d2 .am-tabs-nav>.am-active a{
+    color: #FFFFFF;
+}
+.am-tabs-d2 .am-tabs-nav>.am-active:after{
+    border-bottom-color: #FFFFFF;
+}
+.am-tabs-bd .am-tab-panel{
+    padding: 1.5em 1em 1em 1em;
+}
+.am-btn-primary{
+    background-color: #00acee;
+    border-color: #FFFFFF;
+}
+
+.am-btn-danger{
+    border-color: #FFFFFF;
+}
+.am-form input[type=number],.am-form input[type=password]{
+    border-radius: 10px;
+}
+[class*=am-u-]{
+    padding: 0px;
+}
+.am-selected-btn.am-btn-default{
+    background: #FFFFFF;
+}
+.am-btn-default{
+    border-color: #ccc;
+    border-right:0px solid #FFFFFF ;
+}
+label{
+    font-weight: normal;
+}
+a{
+    color: #FFFFFF;
+}
+a:focus, a:hover{
+    color: #FFFFFF;
+}
+

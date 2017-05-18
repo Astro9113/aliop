@@ -1,0 +1,90 @@
+.header{
+  width: 100%;
+  background: #00a2ff;
+  height: 100px;
+  margin: 0;
+
+  img{
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }
+  h2{
+    font-family: "Microsoft YaHei";
+    font-size: 30px;
+    color: #fafbff;
+    display: inline-block;
+    position: absolute;
+    left: 128px;
+  }
+  p{
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #fafbff;
+    display: inline-block;
+    position: absolute;
+    top: 57px;
+    left: 129px;
+  }
+
+  .astro-header-people{
+    position: relative;
+    top: 36px;
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    line-height: 0;
+    display: inline-block;
+    img{
+      top: 11px;
+    }
+    p{
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      left: 50px;
+      font-size: 18px;
+    }
+  }
+  .astro-header-news{
+    width: 185px;
+  }
+
+  .astro-header-people:hover {
+    background: #0883db;
+  }
+
+  .astro-header-news:hover {
+    background: #0883db;
+  }
+
+  .astro-header-user-button {
+    position: relative;
+    left: 40%;
+    width: 300px;
+    p{
+      font-size: 24px;
+      top: 0;
+      left: 40px;
+    }
+    a{
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+  .astro-home-user-buttonBootom{
+    background: #0588fa;
+    color: #ffffff;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid #0588fa;
+    text-align: center;
+    //transition: all ease-in-out .3s;
+    line-height: 28px;
+    width: 100px;
+    float: right;
+    margin-top: -40px;
+  }
+}

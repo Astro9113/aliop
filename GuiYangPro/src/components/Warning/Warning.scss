@@ -1,0 +1,303 @@
+
+@font-face {
+  /* font-properties */
+  font-family: warningFont;
+  src: url('./BEBAS___.ttf');
+}
+
+.astro-warning-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: warningFont;
+
+  .astro-warning--total {
+    width: 25%;
+    height: 100%;
+    float: left;
+  }
+  .astro-warning-container-part1 {
+
+    p{
+      text-align: center;
+      margin-top: 12px;
+      color: #cccccc;
+      font-size: 14px;
+      margin-bottom: 50px;
+    }
+    h2{
+      margin: 0;
+      margin-top: 65px;
+      text-align: center;
+      font-size: 24px;
+      color: #2b2c35;
+      font-weight: 600;
+    }
+    strong{
+      left: 4%;
+      position: absolute;
+    }
+    img{
+      position: absolute;
+      left: 8.5%;
+      top: 25.5%;
+    }
+    .astro-warning-container-part1-line{
+      height: 260px;
+      border-right: 2px solid #cccccc;
+      display: inline-block;
+      position: absolute;
+      left: 133.5px;
+      top: 191px;
+    }
+    h4{
+      font-size: 60px;
+      color: #3f4154;
+      position: absolute;
+      left: 9.5%;
+      top: 23%;
+    }
+    small{
+      font-size: 18px;
+      color: #3f4154;
+    }
+    .astro-warning-container-part1-foot{
+      width: 320px;
+      height: 80px;
+      margin: 0 auto;
+      position: relative;
+      top: 55%;
+      margin-top: 60px;
+      border: 1px solid #cccccc;
+      p{
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        left: 50px;
+        font-size: 30px;
+        color: #3f4154;
+      }
+      h2{
+        position: absolute;
+        margin: 0;
+        left: 27px;
+        top: 42px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .astro-warning-container-part2{
+    p{
+      text-align: center;
+      margin-top: 12px;
+      color: #cccccc;
+      font-size: 14px;
+      margin-bottom: 50px;
+    }
+    h2{
+      margin: 0;
+      margin-top: 65px;
+      text-align: center;
+      font-size: 24px;
+      color: #2b2c35;
+      font-weight: 600;
+    }
+    strong{
+      left: 30%;
+      position: absolute;
+    }
+    img{
+      position: absolute;
+      left: 34.5%;
+      top: 25.5%;
+    }
+    .astro-warning-container-part1-line{
+      height: 260px;
+      border-right: 2px solid #cccccc;
+      display: inline-block;
+      position: absolute;
+      left: 34.8%;
+      top: 191px;
+    }
+    h4{
+      font-size: 60px;
+      color: #3f4154;
+      position: absolute;
+      left: 35.5%;
+      top: 23%;
+    }
+    small{
+      font-size: 18px;
+      color: #3f4154;
+    }
+    .astro-warning-container-part1-foot{
+      width: 320px;
+      height: 80px;
+      margin: 0 auto;
+      position: relative;
+      top: 55%;
+      margin-top: 60px;
+      border: 1px solid #cccccc;
+      p{
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        left: 50px;
+        font-size: 30px;
+        color: #3f4154;
+      }
+      h2{
+        position: absolute;
+        margin: 0;
+        left: 27px;
+        top: 42px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .astro-warning-container-part3{
+    p{
+      text-align: center;
+      margin-top: 12px;
+      color: #cccccc;
+      font-size: 14px;
+      margin-bottom: 50px;
+    }
+    h2{
+      margin: 0;
+      margin-top: 65px;
+      text-align: center;
+      font-size: 24px;
+      color: #2b2c35;
+      font-weight: 600;
+    }
+    strong{
+      left: 55%;
+      position: absolute;
+    }
+    img{
+      position: absolute;
+      left: 59.5%;
+      top: 25.5%;
+    }
+    .astro-warning-container-part1-line{
+      height: 260px;
+      border-right: 2px solid #cccccc;
+      display: inline-block;
+      position: absolute;
+      left: 59.8%;
+      top: 191px;
+    }
+    h4{
+      font-size: 60px;
+      color: #3f4154;
+      position: absolute;
+      left: 60.5%;
+      top: 23%;
+    }
+    small{
+      font-size: 18px;
+      color: #3f4154;
+    }
+    .astro-warning-container-part1-foot{
+      width: 320px;
+      height: 80px;
+      margin: 0 auto;
+      position: relative;
+      top: 55%;
+      margin-top: 60px;
+      border: 1px solid #cccccc;
+      p{
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        left: 50px;
+        font-size: 30px;
+        color: #3f4154;
+      }
+      h2{
+        position: absolute;
+        margin: 0;
+        left: 27px;
+        top: 42px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .astro-warning-container-part4{
+    p{
+      text-align: center;
+      margin-top: 12px;
+      color: #cccccc;
+      font-size: 14px;
+      margin-bottom: 50px;
+    }
+    h2{
+      margin: 0;
+      margin-top: 65px;
+      text-align: center;
+      font-size: 24px;
+      color: #2b2c35;
+      font-weight: 600;
+    }
+    strong{
+      left: 80%;
+      position: absolute;
+    }
+    img{
+      position: absolute;
+      left: 84.5%;
+      top: 25.5%;
+    }
+    .astro-warning-container-part1-line{
+      height: 260px;
+      border-right: 2px solid #cccccc;
+      display: inline-block;
+      position: absolute;
+      left: 84.8%;
+      top: 191px;
+    }
+    h4{
+      font-size: 60px;
+      color: #3f4154;
+      position: absolute;
+      left: 85.5%;
+      top: 23%;
+    }
+    small{
+      font-size: 18px;
+      color: #3f4154;
+    }
+    .astro-warning-container-part1-foot{
+      width: 320px;
+      height: 80px;
+      margin: 0 auto;
+      position: relative;
+      top: 55%;
+      margin-top: 60px;
+      border: 1px solid #cccccc;
+      p{
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        left: 50px;
+        font-size: 30px;
+        color: #3f4154;
+      }
+      h2{
+        position: absolute;
+        margin: 0;
+        left: 27px;
+        top: 42px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.page{
+    list-style: none;
+}
+.page>li{
+    float: left;
+    padding: 5px 4px;
+    cursor: pointer;
+}
+.page .pageItem{
+    border: solid thin #DDDDDD;
+    margin: 5px;
+}
+.page .pageItemActive{
+    border: solid thin #0099FF;
+    margin: 5px;
+    background-color: #0099FF;
+    color:white;
+}
+.page .pageItem:hover{
+    border: solid thin #0099FF;
+    background-color: #0099FF;
+    color:white;
+}
+.page .pageItemDisable{
+    border: solid thin #DDDDDD;
+    margin: 5px;
+    background-color: #DDDDDD;
+}
+.tab_eve{
+	display:block;
+	width:83vw;
+	height:20vw;
+	margin: 0 auto;
+	margin-top: 10vw;
+}
+.tab_eve a{
+	/*border:1px solid black;*/
+	width:20vw;
+	float:left;
+}
+.tab_eve a img{
+	margin:0 6vw;
+	width:8vw;
+	height:8vw;
+	float:left;
+}
+.tab_eve a p{
+	width: 20vw;
+	font-size:10px;
+	float:left;
+	text-align: center;
+}
+.q_q{
+	float:right;
+}

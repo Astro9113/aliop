@@ -1,0 +1,328 @@
+.astro-personal{
+  position: relative;
+  height: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
+  .astro-personal-header{
+    border-radius: 5px;
+    background: #fff;
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 97.35%;
+    height: 160px;
+    padding-left: 10px;
+    z-index: 999;
+    border: 1px solid #ededed;
+
+    .astro-personal-header-title{
+      position: fixed;
+      margin-top: 40px;
+      h2{
+        font-size: 24px;
+        color: #0081f4;
+      }
+      p{
+        font-size: 14px;
+        color: #cccccc;
+        margin: 0;
+        margin-left: 10px;
+      }
+    }
+    .astro-personal-header-line{
+      height: 100px;
+      border-right: 1px solid #cccccc;
+      display: inline-block;
+      position: fixed;
+      left: 116px;
+      top: 150px;
+      margin-left: 40px;
+    }
+    .astro-personal-header-info-part1{
+      position: fixed;
+      left: 196px;
+      top: 150px;
+      h2{
+        font-size: 36px;
+        margin: 15px 0 15px 0;
+        color: #2b2c35;
+      }
+      p{
+        font-size: 18px;
+        color: #3f404d;
+        margin: 0;
+      }
+    }
+    .astro-personal-header-info-part2{
+      position: fixed;
+      left: 317px;
+      top: 170px;
+      h2{
+        font-size: 18px;
+        margin: 15px 0 15px 0;
+        color: #2b2c35;
+      }
+      small{
+        color: #00a2ff;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      p{
+        font-size: 18px;
+        color: #3f404d;
+        margin: 0;
+      }
+    }
+    .astro-personal-header-info-part3{
+      position: fixed;
+      left: 485px;
+      top: 170px;
+      h2{
+        font-size: 18px;
+        margin: 15px 0 15px 0;
+        color: #2b2c35;
+      }
+      small{
+        color: #00a2ff;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      p{
+        font-size: 18px;
+        color: #3f404d;
+        margin: 0;
+      }
+    }
+
+    .astro-personal-header-photo-part1{
+      position: fixed;
+      left: 1008px;
+      top: 170px;
+      p{
+        font-size: 14px;
+        color: #cccccc;
+        margin-top: 5px;
+      }
+      img{
+        padding-left: 11px;
+        padding-top: 8px;
+      }
+      div{
+        background: white;
+      }
+    }
+    .astro-personal-header-photo-part1 div:hover{
+      background: #cccccc;
+      border-radius: 50px;
+    }
+
+    .astro-personal-header-photo-part2{
+      position: fixed;
+      left: 1128px;
+      top: 170px;
+      p{
+        font-size: 14px;
+        color: #cccccc;
+        margin-top: 5px;
+        margin-left: -16px;
+      }
+      img{
+        padding-left: 11px;
+        padding-top: 11px;
+        margin-left: -4px;
+      }
+      div{
+        background: white;
+      }
+    }
+    .astro-personal-header-photo-part2 div:hover{
+      background: #cccccc;
+      border-radius: 50px;
+    }
+
+    .astro-personal-header-photo-part3{
+      position: fixed;
+      left: 1250px;
+      top: 170px;
+      p{
+        font-size: 14px;
+        color: #cccccc;
+        margin-top: 5px;
+        margin-left: -16px;
+      }
+      img{
+        padding-left: 14px;
+        padding-top: 8px;
+      }
+      div{
+        background: white;
+      }
+    }
+    .astro-personal-header-photo-part3 div:hover{
+      background: #cccccc;
+      border-radius: 50px;
+    }
+
+    .astro-personal-header-photo-part4{
+      position: fixed;
+      left: 1350px;
+      top: 170px;
+      p{
+        font-size: 14px;
+        color: #cccccc;
+        margin-top: 5px;
+        margin-left: 10px;
+      }
+      img{
+        padding-left: 8px;
+        padding-top: 8px;
+      }
+      div{
+        background: white;
+      }
+    }
+    .astro-personal-header-photo-part4 div:hover{
+      background: #cccccc;
+      border-radius: 50px;
+    }
+
+  }
+  .astro-personal-service{
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ededed;
+    position: relative;
+    top: 160px;
+
+    .astro-personal-service-title{
+      margin-left: 5px;
+      margin-top: 20px;
+      display: inline-block;
+      img{
+        margin-top: -10px;
+      }
+      p{
+        display: inline-block;
+        margin-left: 20px;
+        font-size: 24px;
+        color: #2b2c35;
+      }
+    }
+  }
+
+
+
+  .astro-home-search{
+    a{
+      cursor: pointer;
+      position: absolute;
+      top: 14px;
+      left: 28%;
+    }
+    input{
+      width: 29%;
+      height: 50px;
+      border-radius: 4px;
+    }
+    .astro-home-buttonBootom{
+      background: #0588fa;
+      color: #ffffff;
+      outline: none;
+      font-size: 14px;
+      border: 1px solid #0588fa;
+      text-align: center;
+      //transition: all ease-in-out .3s;
+      line-height: 28px;
+      width: 100px;
+      float: right;
+      margin-top: -40px;
+    }
+  }
+
+  .astro-home-thead-tr{
+    height: 50px;
+    background: #f1f3fb;
+    th{
+      line-height: 30px;
+    }
+  }
+
+  .astro-home-page{
+    color: #cccccc;
+    font-size: 16px;
+  }
+  .astro-home-page-span{
+    color: #0081f4;
+  }
+
+  .astro-home-pageNum{
+    float: right;
+    margin-top: -60px;
+    margin-right: 5%;
+    h2{
+      cursor: pointer;
+      font-size: 16px;
+      color: #0081f4;
+      display: inline-block;
+      float: left;
+      padding-top: 10px;
+      margin-left: -50px;
+    }
+    ul{
+      display: inline-block;
+      margin-top: 22px;
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+  .astro-home-pageNum-a2{
+    position: absolute;
+    left: 98%;
+  }
+}
+
+.astro-user-table-td-a1{
+  cursor: pointer;
+  color: #0081f4;
+}
+.astro-user-table-td-a2{
+  cursor: pointer;
+  color: #ff3d24;
+}
+.astro-user-table-td-a1:hover{
+  text-decoration: none;
+  color: #0081f4;
+}
+.astro-user-table-td-a2:hover {
+  text-decoration: none;
+  color: #ff3d24;
+}
+
+.astro-home-modal{
+  h4{
+    text-align: center;
+    background: #f6f6f6;
+    height: 50px;
+    line-height: 45px;
+    margin: 0;
+  }
+}
+.astro-home-modal-form{
+  margin-top: 20px;
+  margin-left: 17%;
+}
+.astro-home-modal-button{
+  button{
+    background: #0588fa;
+    color: #ffffff;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid #0588fa;
+    text-align: center;
+    line-height: 28px;
+    width: 100px;
+    margin: 50px 10px;
+    position: relative;
+    left: 32%;
+  }
+}

@@ -1,0 +1,49 @@
+.astro-personal-apply{
+  //position: relative;
+  //top: 1118px;
+}
+.astro-personal-apply-line{
+  //width: 100%;
+  border: 1px solid #ededed;
+  //position: absolute;
+  //top: 65px;
+}
+.astro-personal-apply-title {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: inline-block;
+  img {
+    margin-top: -10px;
+    padding-left: 5px;
+  }
+  p {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 24px;
+    color: #2b2c35;
+  }
+}
+
+.astro-personal-apply-button{
+  button{
+    background: #0588fa;
+    color: #ffffff;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid #0588fa;
+    text-align: center;
+    line-height: 28px;
+    width: 100px;
+    float: right;
+    margin-right: 100px;
+  }
+  img {
+    padding-right: 5px;
+  }
+}
+
+
+.astro-personal-apply-page{
+  position: relative;
+  top: 20px;
+}

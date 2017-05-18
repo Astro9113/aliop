@@ -1,0 +1,36 @@
+.admin-header-list{
+	width:105vw;
+	background:#00a2ff;
+	font-size: 10px;
+	overflow: hidden;
+}
+.img_1{
+	width:10vw;
+}
+.col_left{
+	width:110vw;
+	line-height:10vw;
+}
+.col_left span {
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color:white;
+}
+.col_right{
+	float:right;
+}
+.col_right_left{
+	float:left;
+}
+.col_right_right{
+	float:left;
+}
+.col_right_right img{
+	width:20px;
+}
+.am-table{
+	width:100vw;
+}
+#page{
+	font-size: 8px;;
+}
