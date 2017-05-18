@@ -1,0 +1,42 @@
+.signup-container {
+  min-height: 500px;
+  position: relative;
+}
+
+.signup-button {
+  position: absolute;
+  left: 28%;
+  top: 10%;
+
+  button{
+    outline: none;
+    margin-top: 5rem;
+    font-size: 18px;
+    border: 1px solid #0588fa;
+    color: #0588fa;
+    text-align: center;
+    /* padding: 2px 20px; */
+    //border-radius: 50px;
+    background: #ffffff;
+    transition: all ease-in-out .3s;
+    line-height: 28px;
+    width: 150px;
+  }
+
+  button:hover {
+    background: #0588fa;
+    color: #ffffff;
+  }
+}
+
+.signup-type {
+
+  h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  button {
+    margin-left: 35px;
+    margin-top: 20px;
+  }
+}

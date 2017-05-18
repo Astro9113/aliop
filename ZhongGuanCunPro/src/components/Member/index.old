@@ -1,0 +1,64 @@
+import React, { Component, PropTypes } from 'react';
+// import { Link } from 'react-router';
+import HeaderNew from '../../components/HeaderNew';
+
+export default class Member extends Component {
+  static propTypes = {
+    queryMemberAll: PropTypes.func.isRequired,
+    memberAllData: PropTypes.object,
+  };
+
+  componentDidMount() {
+    this.props.queryMemberAll('');
+  }
+
+  render() {
+    const style = require('./Member.scss');
+    // const icon = require('./member.png');
+    let startList;
+    // let creditList;
+    // let secuityList;
+    // let lawList;
+    // let govList;
+    const { memberAllData } = this.props;
+
+    if (memberAllData.data && memberAllData.data !== 0 ) {
+      startList = memberAllData.data.map((transaction) => {
+        return (
+          <div className="col-lg-6" key={transaction._id} style={{padding: '2rem'}}>
+            <a href={transaction.website} target="_blank">
+              <img src={transaction.img}/>
+              <p style={{display: 'inline-block', fontSize: '18px', color: '#0087ff'}}>{transaction.title}</p>
+              <p style={{fontSize: '14px', color: '#798399', margin: '5px'}}>{transaction.platform}</p>
+              <p className={style['my-member-p']}>{transaction.intro}</p>
+            </a>
+          </div>
+        );
+      });
+    }
+
+    return (
+      <div style={{paddingBottom: '5rem'}}>
+        <HeaderNew/>
+        <div className= {style.member}>
+        </div>
+        <div className={'container ' + style.banner}>
+          <h2>会员快捷查询导航</h2>
+          <p>相关资讯、咨询服务、相关单位协会快捷导航</p>
+        </div>
+        <div className={ 'container ' + style.star}>
+          <h2>明星领投人及领导机构公示</h2>
+          <div className="row">
+            {startList}
+          </div>
+        </div>
+        <div className={ 'container ' + style.star}>
+          <h2>征信用途</h2>
+          <div className="row">
+            {startList}
+          </div>
+        </div>
+      </div>
+    );
+  }
+}

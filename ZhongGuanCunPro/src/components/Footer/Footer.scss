@@ -1,0 +1,120 @@
+
+@media screen and  (min-width: 500px){
+  .bottomPart{
+    margin-top: -12rem;
+  }
+  .fisrtPart{
+    background: #2b2c35;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    color: #ffffff;
+    font-size: 1.4rem;
+    .wrapper{
+      width: 1200px;
+      margin: 0 auto;
+      padding: 2% 0;
+      .left {
+        display: inline-block;
+        float: left;
+        padding-left: 20px;
+        padding-top: 20px;
+        img {
+          margin-right: 0.5rem;
+        }
+        li {
+          list-style: none;
+          margin-bottom: 1rem;
+        }
+        ul {
+          margin-top: 2rem;
+        }
+      }
+      .right {
+        display: inline-block;
+        float: right;
+        padding-right: 20px;
+        padding-top: 15px;
+        img{
+          vertical-align: text-bottom;
+        }
+        p{
+          font-size: 12px;
+          color: #ffffff;
+          padding-top: 10px;
+          padding-left: 60px;
+        }
+      }
+    }
+
+    span{
+      font-size: 1.4rem;
+    }
+  }
+
+  .secondPart{
+    background: #23242e;
+    p{
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      line-height: 4rem;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bottomPart{
+    margin-top: -11.5rem;
+  }
+  .fisrtPart{
+    background: #2b2c35;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    color: #ffffff;
+    font-size: 1.4rem;
+    .wrapper{
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-left: 70px;
+      padding-bottom: 10px;
+      padding-right: 39px;
+      .left {
+        display: inline-block;
+        img {
+          margin-right: 0.5rem;
+        }
+        li {
+          list-style: none;
+          margin-bottom: 1rem;
+        }
+        ul {
+          margin-top: 2rem;
+        }
+      }
+      .right {
+        display: inline-block;
+        img{
+          width: 90%;
+        }
+        li {
+          list-style: none;
+          margin-bottom: 1rem;
+        }
+
+        ul {
+          margin-top: 2rem;
+          margin-left: 2.5rem;
+        }
+
+      }
+    }
+
+    span{
+      font-size: 1.4rem;
+    }
+  }
+  .secondPart{
+    display: none;
+  }
+}

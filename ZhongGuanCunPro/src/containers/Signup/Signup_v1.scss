@@ -1,0 +1,71 @@
+.loginPage {
+  margin-top: 15px;
+  min-height: calc(100vh - 120px);
+  background: url('../Login/background.jpg') no-repeat;
+  border:1px solid #def;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  .login {
+    background: white;
+    width: 780px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow:0px 1px 2px 1px #aaaaaa,
+    inset 0px 1px 1px rgba(255,255,255,0.7);
+    border-radius: 3px;
+  }
+  .login h1 {
+    margin: 0;
+    margin-top: 60px;
+    margin-left: 70px;
+    font-size: 30px;
+    color: #474e5d;
+  }
+  .form {
+    float: right;
+    width: 480px;
+    height: 480px;
+  }
+  .from1 {
+    margin: 0;
+    padding: 0;
+    margin-left: 70px;
+    margin-top: 45px;
+  }
+  .aa {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .aa span {
+    font-size: 24px;
+    color: #ffffff;
+    position: relative;
+    top: -46px;
+    left: 53px;
+  }
+  .pp {
+    color: #3680f8;
+    font-size: 18px;
+    font-family: MicrosoftYaHei;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: -75px;
+  }
+  .buttons {
+    width: 140px;
+    margin: 0 auto;
+    float: left;
+  }
+  .login_btn {
+    font-family: Helvetica;
+  }
+}

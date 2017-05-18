@@ -1,0 +1,122 @@
+.member {
+  background-image: url("../Member/ad.png");
+  background-size:100% auto;
+  background-repeat: no-repeat;
+  background-position: right top;
+  //margin-top: 75px;
+}
+
+.member:before {
+  content: "";
+  display: block;
+  padding-top: 18%;
+}
+
+.banner {
+  text-align: center;
+  margin-top: 4rem;
+  h2{
+    font-size: 36px;
+    color: #2b2c35;
+    margin-top: 0;
+  }
+  p{
+    font-size: 14px;
+    color: #798399;
+  }
+}
+
+.astro-img{
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 50px;
+  img{
+    width: 160px;
+    clear: both;
+    display: block;
+    margin: auto;
+    max-width: 160px;
+    _width: expression(this.width > 160 ? "160px" : this.width);
+  }
+}
+
+.search {
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+  margin-right: 2rem;
+}
+
+.row {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 3px 6px 7px rgba(0, 0, 0, 0.3);
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.my-memberAll-row {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  height: 410px;
+}
+
+.buttonBootom{
+  outline: none;
+  margin-top: 5rem;
+  font-size: 18px;
+  border: 1px solid #0588fa;
+  color: #0588fa;
+  text-align: center;
+  /* padding: 2px 20px; */
+  //border-radius: 50px;
+  background: #ffffff;
+  transition: all ease-in-out .3s;
+  line-height: 28px;
+  width: 150px;
+}
+
+.buttonBootom:hover {
+  background: #0588fa;
+  color: #ffffff;
+}
+
+.my-memberAll-p{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  text-indent: 2rem;
+  word-break: break-all;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-size: 14px;
+  color: #798399;
+  position:relative;
+  line-height:1.4em;
+  height:10rem;
+  overflow:hidden;
+
+}
+
+//.my-memberAll-p {
+//  position:relative;
+//  line-height:1.4em;
+//  /* 3 times the line-height to show 3 lines */
+//  height:4.2em;
+//  overflow:hidden;
+//}
+.my-memberAll-p::after {
+  content:"...";
+  font-weight:bold;
+  position:absolute;
+  bottom:0;
+  right:0;
+  padding:0 20px 1px 45px;
+  background:url('./ellipsis_bg.png') repeat-y;
+}

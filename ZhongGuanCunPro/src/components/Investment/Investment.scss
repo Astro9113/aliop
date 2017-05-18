@@ -1,0 +1,108 @@
+.member {
+   background-image: url("../Member/ad.png");
+   background-size:100% auto;
+   background-repeat: no-repeat;
+   background-position: right top;
+ }
+
+.member:before {
+  content: "";
+  display: block;
+  padding-top: 18%;
+}
+
+.banner {
+  text-align: center;
+  margin-top: 4rem;
+  h2{
+    font-size: 36px;
+    color: #2b2c35;
+    margin-top: 30px;
+  }
+  p{
+    font-size: 14px;
+    color: #798399;
+  }
+}
+
+.star {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 3px 6px 0px rgba(5, 13, 208, 0.05);
+  margin-top: 3rem;
+  padding-bottom: 10px;
+}
+
+.star ul {
+  list-style: none;
+  float: left;
+  padding: 0;
+  margin-right: 4rem;
+  margin-top: 2rem;
+}
+
+.star img {
+  float: left;
+  margin-top: 0.7rem;
+  margin-right: 2.7rem;
+}
+
+.search {
+  position: absolute;
+  right: 0;
+}
+
+.butttonLeft{
+  outline: none;
+  margin-top: 2rem;
+  font-size: 14px;
+  border: 1px solid #0588fa;
+  color: #0588fa;
+  text-align: center;
+  /* padding: 2px 20px; */
+  border-radius: 50px;
+  background: #ffffff;
+  //transition: all ease-in-out .3s;
+  line-height: 28px;
+  width: 80px;
+  margin-right: 15px;
+}
+
+.butttonLeft:hover {
+  background: #0588fa;
+  color: #ffffff;
+}
+
+
+.buttonBootom{
+  outline: none;
+  margin-top: 5rem;
+  font-size: 18px;
+  border: 1px solid #0588fa;
+  color: #0588fa;
+  text-align: center;
+  /* padding: 2px 20px; */
+  //border-radius: 50px;
+  background: #ffffff;
+  //transition: all ease-in-out .3s;
+  line-height: 28px;
+  width: 150px;
+}
+
+.buttonBootom:hover {
+  background: #0588fa;
+  color: #ffffff;
+}
+
+.my-invest-input{
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .my-invest-button{
+    display: none;
+  }
+  .my-invest-search{
+    width: 100%;
+  }
+}

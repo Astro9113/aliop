@@ -1,0 +1,33 @@
+.cms-right {
+  min-height: 500px;
+  h3 {
+    text-align: center;
+  }
+  .cms-search {
+    float: right;
+    margin-top: 20px;
+    img {
+      position: absolute;
+      top: 20%;
+      left: 94%;
+    }
+  }
+}
+
+.cms-page {
+  padding-left: 80px;
+  padding-bottom: 60px;
+}
+
+.cms-page li a:hover {
+  border-radius: 0;
+}
+
+.modal-invest {
+  padding: 0;
+}
+
+.modal-group{
+  margin: 0;
+  padding: 20px;
+}

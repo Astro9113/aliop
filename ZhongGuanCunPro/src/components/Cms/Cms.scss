@@ -1,0 +1,42 @@
+.cms-container {
+  h2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 50px;
+  }
+}
+
+.cms-left {
+  button{
+    outline: none;
+    font-size: 18px;
+    border: 1px solid #0588fa;
+    color: #0588fa;
+    text-align: center;
+    /* padding: 2px 20px; */
+    background: #ffffff;
+    transition: all ease-in-out .3s;
+    line-height: 35px;
+  }
+
+  button:hover {
+    background: #0588fa;
+    color: #ffffff;
+  }
+}
+
+.cms-right {
+  min-height: 500px;
+  h3 {
+    text-align: center;
+  }
+  .cms-search {
+    float: right;
+    margin-top: 20px;
+    img {
+      position: absolute;
+      top: 20%;
+      left: 94%;
+    }
+  }
+}

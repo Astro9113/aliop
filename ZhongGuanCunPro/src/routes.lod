@@ -1,0 +1,66 @@
+import React from 'react';
+import {IndexRoute, Route} from 'react-router';
+import { isLoaded as isAuthLoaded, load as loadAuth } from './redux/modules/auth';
+import {
+  App,
+  Profile,
+  Login,
+  LoginSuccess,
+  ExistEvidents,
+  NewPro,
+  Signup,
+  LocalFile,
+  RemoteFile,
+  UploadFile,
+  TextInfo,
+  Proof,
+
+  Test,
+  NotFound,
+  TransactionList,
+  TransactionDetail
+} from './containers';
+
+import { Greeting } from './components';
+export default (store) => {
+  const requireLogin = (nextState, replace, cb) => {
+    function checkAuth() {
+      const { auth: { user }} = store.getState();
+      if (!user) {
+        replace('/');
+      }
+      cb();
+    }
+
+    if (!isAuthLoaded(store.getState())) {
+      store.dispatch(loadAuth()).then(checkAuth);
+    } else {
+      checkAuth();
+    }
+  };
+  return (
+    <Route path="/" component={App}>
+      <IndexRoute component={Greeting}/>
+      <Route onEnter={requireLogin}>
+        <Route path="loginSuccess" component={LoginSuccess}/>
+        <Route path="/transactions" component={ExistEvidents} >
+          <IndexRoute component={TransactionList}/>
+          <Route path="/transactions/:id" component={TransactionDetail}/>
+        </Route>
+        <Route path="/new" component={NewPro}>
+          <IndexRoute component={LocalFile}/>
+          <Route path="remote" component={RemoteFile}/>
+          <Route path="upload" component={UploadFile}/>
+          <Route path="text" component={TextInfo}/>
+        </Route>
+        <Route path={'/pf' + '/:proof_page'} component={Proof}/>
+      </Route>
+      <Route path="signup" component={Signup}/>
+      <Route path="profile" component={Profile}/>
+      <Route path="login" component={Login}/>
+
+      <Route path="test" component={Test}/>
+      <Route path="*" component={NotFound} status={404} />
+    </Route>
+  );
+};
